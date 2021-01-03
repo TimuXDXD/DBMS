@@ -11,7 +11,15 @@
                   ".$_new['price'].",
                   '".$_new['date']."',
                   '".$_new['branch']."');");
-        echo $query;
+        // echo $query;
+        $stmt= $db->prepare($query);
+        $result = $stmt->execute();
+
+        $query = ("UPDATE Sells set sell=(SELECT sell FROM Sells WHERE brand_name = '".$_new['brand_name']."') + 1,
+                last_sell_date='". $_new['date'] . "',
+                last_price=". $_new['price'] ."
+                WHERE brand_name = '".$_new['brand_name']."';");
+        // echo $query;
         $stmt= $db->prepare($query);
         $result = $stmt->execute();
     }
@@ -56,5 +64,7 @@
           )
       );
       Add($_data);
+      header("Location: manage.php");
+      exit();
     }
 ?>

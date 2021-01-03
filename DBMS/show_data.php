@@ -20,7 +20,7 @@
         </tr>";
 
   for($i=0; $i<count($result); $i++){
-    echo '<tr id="row-'.$i.'">';
+    echo '<tr>';
     echo '<td>'.$result[$i]['ID'].'</td>'.
          '<td>'.$result[$i]['brand_name'].'</td>'.
          '<td>'.$result[$i]['model'].'</td>'.

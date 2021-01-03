@@ -52,7 +52,7 @@
           <tr>
             <td>
               <label for="power">馬力：</label>
-              <input size="4" type="text" name="power" value="">
+              <input size="5" type="text" name="power" value="">
             </td>
           </tr>
           <tr>

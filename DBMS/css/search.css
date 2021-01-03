@@ -133,3 +133,9 @@ table.result_table td{
   margin: 0 auto;
   border: 1px solid black;
 }
+
+tr.foot td{
+  border: none;
+  text-align: right;
+  padding-top: 2px;
+}

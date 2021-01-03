@@ -12,7 +12,7 @@
 
   if(isset($_POST['button']) or isset($_POST['branches']) or isset($_POST['models']) or isset($_POST['power']) or isset($_POST['cc']) or isset($_POST['price'])){
         $first = 1;
-        $query = "SELECT * FROM Cars WHERE ";
+        $query = "SELECT * FROM Cars NATURAL JOIN Info WHERE ";
         if(!empty($keyword) and $first){
           $first = 0;
           $query .=  "(ID LIKE '%$keyword%' OR
@@ -168,6 +168,8 @@
                     <th>Price(TWD)</th>
                     <th>Date</th>
                     <th>Branch</th>
+                    <th>Address</th>
+                    <th>Phone</th>
                   </tr>
                 </thead>
                 <tbody>";
@@ -180,10 +182,17 @@
                 "<td>".$result[$i]['cc'].'</td>'.
                 "<td>".$result[$i]['price'].'</td>'.
                 "<td>".$result[$i]['date'].'</td>'.
-                "<td>".$result[$i]['branch'].'</td>';
+                "<td>".$result[$i]['branch'].'</td>'.
+                "<td>".$result[$i]['address'].'</td>'.
+                "<td>".$result[$i]['phone'].'</td>';
             echo "</tr>";
          }
-         echo "</tbody></table>";
+         echo "<tr class='foot'>
+                <td colspan='10'>
+                   <p>共計".count($result)."種車款</p>
+                 </td>
+               </tr>
+         </tbody></table>";
        }
        else{
          echo '未搜尋到相關結果';

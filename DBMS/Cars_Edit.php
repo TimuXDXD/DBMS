@@ -29,7 +29,7 @@
         <tr>
           <td>
             <label for="power">馬力：</label>
-            <input size="4" type="text" name="power" value="'.$result[0]['power'].'">
+            <input size="5" type="text" name="power" value="'.$result[0]['power'].'">
           </td>
         </tr>
         <tr>

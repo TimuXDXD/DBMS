@@ -77,6 +77,11 @@ h1 {
   text-align: left;
 }
 
+span.count{
+  font-size: 12pt;
+  font-weight: normal;
+}
+
 table.main{
   margin: 0 auto;
   border-collapse: collapse;

@@ -22,7 +22,7 @@
           編輯
           <ul>
             <li><a href="manage.php">管理商品</a></li>
-            <li><a href="add.html">新增商品</a></li>
+            <li><a href="add.php">新增商品</a></li>
           </ul>
         </nav>
       </div>

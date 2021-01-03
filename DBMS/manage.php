@@ -30,7 +30,7 @@
       </div>
     </header>
     <center>
-        <h1>管理商品</h1>
+        <h1>管理商品<?php  include 'count.php';?></h1>
         <form id="main_form" action="" method="post">
           <table id="main" class="main">
           </table>
