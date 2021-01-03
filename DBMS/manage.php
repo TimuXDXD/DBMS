@@ -7,6 +7,8 @@
     <meta http-equiv="Expires" content="-1">
     <link rel="preload" href="css/manage.css" as="style">
     <link rel="stylesheet"  type="text/css" href="css/manage.css">
+    <script src="js/manager.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>販賣車輛管理系統</title>
   </head>
   <body>
@@ -16,22 +18,29 @@
           <a href="home.html">首頁</a>
         </nav>
         <nav>
-          <a href="search.html">搜尋</a>
+          <a href="search.php">搜尋</a>
         </nav>
         <nav>
           編輯
           <ul>
-            <li><a href="manage.html">管理商品</a></li>
-            <li><a href="add.html">新增商品</a></li>
-            <li><a href="edit.html">修改商品</a></li>
+            <li><a href="manage.php">管理商品</a></li>
+            <li><a href="add.php">新增商品</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <center>
-      <div class="main">
-        
-      </div>
+        <h1>管理商品</h1>
+        <form id="main_form" action="" method="post">
+          <table id="main" class="main">
+          </table>
+        </form>
     </center>
+    <?php  include 'Cars_Delete.php';?>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('#main').load('show_data.php');
+      });
+    </script>
   </body>
 </html>
